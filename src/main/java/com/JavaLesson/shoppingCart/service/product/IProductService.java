@@ -2,15 +2,15 @@ package com.JavaLesson.shoppingCart.service.product;
 
 import com.JavaLesson.shoppingCart.model.Product;
 import com.JavaLesson.shoppingCart.request.AddProductRequest;
+import com.JavaLesson.shoppingCart.request.ProductUpdateRequest;
 
 import java.util.List;
 
 public interface IProductService {
     Product addProduct(AddProductRequest product);
-
     Product getProductId(Long id);
     void deleteProductById(Long id);
-    Product updateProduct(Product product, Long productId);
+    Product updateProduct(ProductUpdateRequest product, Long productId);
     List<Product> getAllProducts();
     List<Product> getProductsByCategoryId(Long categoryId);
     List<Product> getProductsByCategory(String category);
